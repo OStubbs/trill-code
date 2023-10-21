@@ -46,6 +46,7 @@ class BulkImageCompress:
                 quality=self.quality, # Lossless quality setting
                 **self.kwargs)   # Dynamic arguments based on output type
 
-bic = BulkImageCompress(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])
-bic.get_files()
-bic.compress_all()
+if __name__ == "__main__":
+    bic = BulkImageCompress(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])
+    bic.get_files()
+    bic.compress_all()
